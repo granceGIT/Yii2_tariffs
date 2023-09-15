@@ -42,14 +42,19 @@ class TariffController extends Controller
         ]);
     }
 
-    public function actionEdit()
+    public function actionShow($id)
     {
-        return 1;
+        $model = $this->loadModel($id);
+        return $this->render('show',[
+            'model'=>$model,
+        ]);
     }
 
-    public function actionUpdate()
+    public function actionUpdate($id,$speed)
     {
-        return 1;
+        $model = $this->loadModel($id);
+        $model->speed = $speed;
+        $model->save();
     }
 
     public function actionDelete($id)

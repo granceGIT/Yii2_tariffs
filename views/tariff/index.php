@@ -1,6 +1,7 @@
 <?php use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
+$this->title = 'Тарифы';
 $this->registerCssFile('@web/css/tariffs.css',['depends'=>'app\assets\AppAsset']);?>
 <section id="tariffs" class="tariffs-wrapper">
     <div class="section-heading">
@@ -12,7 +13,7 @@ $this->registerCssFile('@web/css/tariffs.css',['depends'=>'app\assets\AppAsset']
     <div class="tariffs-body">
         <?php foreach ($tariffs as $tariff) {?>
             <div class="tariff-card">
-                <?php echo Html::a('&times;', array('tariff/delete', 'id'=>$tariff->id),['class'=>'btn delete-btn','aria-label'=>'Удалить']); ?>
+                <?= Html::a('&times;', array('tariff/delete', 'id'=>$tariff->id),['class'=>'btn delete-btn','aria-label'=>'Удалить']); ?>
                 <h3 class="tariff-card-title">
                     <?=$tariff->name?></h3>
                 <span class="tariff-card-subtitle">
@@ -44,9 +45,7 @@ $this->registerCssFile('@web/css/tariffs.css',['depends'=>'app\assets\AppAsset']
                         </p>
                     </div>
                 </div>
-                <button class="tariff-card-button btn" role="button" aria-label="Выбрать тариф" title="Выбрать тариф">
-                    Выбрать тариф
-                </button>
+                <?= Html::a('Выбрать тариф', array('tariff/show', 'id'=>$tariff->id),['class'=>'tariff-card-button btn']); ?>
             </div>
         <?php }?>
     </div>

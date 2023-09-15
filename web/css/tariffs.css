@@ -39,6 +39,22 @@
     color: var(--clr-accent);
 }
 
+.tariff-card-speed-input{
+    display: block;
+    max-width: 100%;
+    width: 7ch;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid silver;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 2ch;
+}
+
+.tariff-card-speed-input:focus{
+    outline: 0;
+}
+
 .tariff-card-subtitle{
     text-align: left;
     align-self: start;
