@@ -1,0 +1,66 @@
+.tariffs-body{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:2rem;
+}
+
+.tariff-card{
+    padding: 1rem 3rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px #d3d3d3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: .4rem;
+}
+
+.tariff-card-title,.tariff-card-price-block{
+    font-size: 1.3rem;
+}
+
+.tariff-card-speed-block{
+    margin: 30px 0;
+    width: 20ch;
+    height: 20ch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    border: .5rem solid var(--clr-accent);
+}
+
+.tariff-card-speed{
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--clr-accent);
+}
+
+.tariff-card-subtitle{
+    text-align: left;
+    align-self: start;
+}
+
+.tariff-card-price-block,.tariff-card-price{
+    display: flex;
+}
+
+.tariff-card-price-block{
+    width: 100%;
+    justify-content: space-around;
+}
+
+.tariff-card-button{
+    width: 100%;
+}
+
+.add-tariff-button{
+    background-color: #21a222 ;
+}
+
+.add-tariff-button:hover{
+    border-color: #21a222;
+    color: #21a222;
+}

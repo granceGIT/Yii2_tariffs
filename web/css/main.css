@@ -1,0 +1,47 @@
+:root{
+    --clr-accent: #1761e0;
+    --clr-alt: #ea7212;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container>section {
+    margin: 2rem auto 3rem;
+}
+
+.section-title{
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-heading{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.btn{
+    outline: 0;
+    border: 1px solid transparent;
+    border-radius:.4em;
+    padding: .5em 1.5em;
+    background-color: var(--clr-accent);
+    color: #fff;
+    transition: all .4s;
+}
+
+.btn:hover,.btn:focus{
+    background-color: transparent;
+    color: var(--clr-accent);
+    border-color: var(--clr-accent);
+}
+
+.price::after{
+    content:'\20BD'
+}
