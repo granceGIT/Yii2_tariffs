@@ -5,6 +5,7 @@
 }
 
 .tariff-card{
+    position: relative;
     padding: 1rem 3rem 2rem;
     border-radius: 10px;
     box-shadow: 0px 0px 15px 0px #d3d3d3;
@@ -60,7 +61,13 @@
     background-color: #21a222 ;
 }
 
-.add-tariff-button:hover{
+.add-tariff-button:hover,.add-tariff-button:focus{
     border-color: #21a222;
     color: #21a222;
+}
+
+.add-tariff-form{
+    max-width: 50ch;
+    display: flex;
+    flex-direction: column;
 }

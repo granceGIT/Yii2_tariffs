@@ -1,14 +1,18 @@
-<?php $this->registerCssFile('@web/css/tariffs.css',['depends'=>'app\assets\AppAsset']);?>
+<?php use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+
+$this->registerCssFile('@web/css/tariffs.css',['depends'=>'app\assets\AppAsset']);?>
 <section id="tariffs" class="tariffs-wrapper">
     <div class="section-heading">
         <h2 class="section-title">Тарифы</h2>
         <div class="tariffs-manage">
-            <button class="btn add-tariff-button">Добавить</button>
+            <a class="btn add-tariff-button" href="<?=\yii\helpers\Url::to(['tariff/create'])?>">Добавить</a>
         </div>
     </div>
     <div class="tariffs-body">
         <?php foreach ($tariffs as $tariff) {?>
             <div class="tariff-card">
+                <?php echo Html::a('&times;', array('tariff/delete', 'id'=>$tariff->id),['class'=>'btn delete-btn','aria-label'=>'Удалить']); ?>
                 <h3 class="tariff-card-title">
                     <?=$tariff->name?></h3>
                 <span class="tariff-card-subtitle">
